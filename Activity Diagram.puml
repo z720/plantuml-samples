@@ -1,0 +1,14 @@
+start
+
+:Step 1a;
+if (condition 1)
+:Step 1b';
+else if (condition2)
+:Step 1b'';
+else (error)
+:Exception;
+end
+endif
+:Final Step;
+
+stop

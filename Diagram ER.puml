@@ -1,0 +1,13 @@
+
+Entity OA as "Object A" {
+ * key
+ * attribute 1
+attributes 2
+}
+
+Entity OB as "Object B" {
+* key
+* attribute 3
+}
+
+OA "1" -r-{ "n" OB: A as many B

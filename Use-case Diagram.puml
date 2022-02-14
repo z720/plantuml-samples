@@ -1,0 +1,11 @@
+
+Actor a1 as "Business role 1"
+Actor a2 as "Business role 2"
+
+a1 --> (Step 1)
+(Step 1) --> (Step 1a): <<include>>
+(Step 1) --> (Step 1b): <<include>>
+
+a2 --> (Step 2)
+(Step 2) <|-- (Common case): <<extends>>
+(Step 1b) <|-- (Common case): <<extends>>

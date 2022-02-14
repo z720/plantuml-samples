@@ -1,0 +1,23 @@
+
+hide empty description
+
+state login {
+    state "Form" as LoginForm
+    state " " as auth <<choice>>
+}
+state Screen1: <<menu>>
+state Screen2: <<menu>>
+state Screen3: <<menu>>
+state Screen4: <<menu>>
+state  "<<menu>>" as menu
+
+[*] -d-> LoginForm
+LoginForm -d-> auth:  [login]
+auth --> Screen1: //success//
+auth --> LoginForm: //fail//
+menu -r-> LoginForm:  [logout]
+Screen1 --> Screen2:  [save]
+Screen2 --> Screen1:  [edit]
+Screen2 --> Screen3:  [show details]
+Screen2 --> Screen4 :  [edit]
+Screen4 --> Screen2 :  [save]
